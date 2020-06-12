@@ -169,7 +169,7 @@ function myCheckHit(){
         myNext = false
         clearInterval(myTimerRight)
         console.log('up')
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 50 + 'px'
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 150 + 'px'
         document.getElementById('myDiv02').innerHTML = transcript
         myCheckHit()     // checks for all collisions
       }
@@ -207,7 +207,7 @@ function myCheckHit(){
         myNext = false
         clearInterval(myTimerRight)
         console.log('down')
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 50 + 'px'
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 150 + 'px'
         document.getElementById('myDiv02').innerHTML = transcript
         myCheckHit()     // checks for all collisions
       }
