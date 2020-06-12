@@ -43,12 +43,12 @@ function myHitOther(my1,my2){
 function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
-       //alert('you lose')
+       alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
-       //alert('you lose')
+       alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
    }   
    
@@ -93,13 +93,17 @@ function myCheckHit(){
   myCheckHit()     // checks for all collisions
 }"><br><br>
 
+<input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 - 'px'
+  myCheckHit()     // checks for all collisions
+}"><br><br>
 
 
 
-<img id="myImg01" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
-<img id="myImg03" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left:500px; top:190px;">
-<img id="myImg04" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left:500px; top:400px;">
+<img id="myImg01" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left: 50px; top:550px;">
+<img id="myImg02" src="myImgNew.jpg"  style="position:absolute; width:100px; height:300px; left:350px; top:400px;">
+<img id="myImg03" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left:600px; top:300px;">
+<img id="myImg04" src="myImgNew.jpg"  style="position:absolute; width:100px; height:80px; left:850px; top:400px;">
 
 
 
