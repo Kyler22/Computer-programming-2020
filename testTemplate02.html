@@ -184,7 +184,7 @@ function myCheckHit(){
       if (transcript.indexOf('down') >= 1){ 
         myNext = false
         clearInterval(myTimerRight)
-        console.log('up')
+        console.log('down')
         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 - 'px'
         document.getElementById('myDiv02').innerHTML = transcript
         myCheckHit()     // checks for all collisions
