@@ -190,7 +190,7 @@ function myCheckHit(){
          console.log('left')  
          clearInterval(myTimerRight)
          myTimerRight = setInterval(function(){
-           document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+           document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
            document.getElementById('myDiv02').innerHTML = transcript
            myCheckHit()     // checks for all collisions
         }, 50)
