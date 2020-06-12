@@ -89,14 +89,11 @@ function myCheckHit(){
 }">
 
 <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
 
-<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 - 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
+
 
 
 
@@ -183,7 +180,16 @@ function myCheckHit(){
       }
     }
         
-
+    if (myNext){
+      if (transcript.indexOf('down') >= 1){ 
+        myNext = false
+        clearInterval(myTimerRight)
+        console.log('up')
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 - 'px'
+        document.getElementById('myDiv02').innerHTML = transcript
+        myCheckHit()     // checks for all collisions
+      }
+    }
 
     
     
