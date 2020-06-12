@@ -82,10 +82,10 @@ function myCheckHit(){
     
 }">
 
-  <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + 10 - 'px'
+<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 - 'px'
   myCheckHit()     // checks for all collisions
-}">
+}"><br><br>
 
 <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
@@ -175,6 +175,19 @@ function myCheckHit(){
       if (transcript.indexOf('right') >= 1){ 
          myNext = false
          console.log('right')  
+         clearInterval(myTimerRight)
+         myTimerRight = setInterval(function(){
+           document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+           document.getElementById('myDiv02').innerHTML = transcript
+           myCheckHit()     // checks for all collisions
+        }, 50)
+      }
+    }
+    
+        if (myNext){
+      if (transcript.indexOf('left') >= 1){ 
+         myNext = false
+         console.log('left')  
          clearInterval(myTimerRight)
          myTimerRight = setInterval(function(){
            document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
